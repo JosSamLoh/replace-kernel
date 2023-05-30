@@ -6,7 +6,7 @@
 
     sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-fsync
 
-### vvv Built off of vvv
+# vvv Built off of vvv
 
 # Starting point
 
