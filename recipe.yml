@@ -48,8 +48,6 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client/repo/fedora-%FEDORA_VERSION%/pgaskin-looking-glass-client-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-%FEDORA_VERSION%/lukenukem-asus-linux-fedora-%FEDORA_VERSION%.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -57,7 +55,7 @@ rpm:
   # at the "system level" in the final image.
   install:
     # Needed for yafti (the first boot installer). Remove if you're not using yafti.
-    # - python3-pip
+    - python3-pip
     # GNOME's GTK4 theme, Libadwaita. Already included in Silverblue, but not
     # other spins. You can remove if you aren't using yafti, but many native
     # apps and binaries require it, so it's a good idea to always include it
@@ -66,12 +64,6 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
-    - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%FEDORA_VERSION%.noarch.rpm
-    - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%FEDORA_VERSION%.noarch.rpm
-    - looking-glass-client
-    - virt-manager
-    - lm_sensors
-    - supergfxctl
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
@@ -95,3 +87,5 @@ firstboot:
   # the "just setup-flatpaks" command from our "custom.just" template file.
   # This is just an example selection:
   flatpaks:
+    - io.github.celluloid_player.Celluloid
+    - org.kde.krita
