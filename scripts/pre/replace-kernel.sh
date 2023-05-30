@@ -50,4 +50,4 @@ cd ..
 
 # Cleanup
 rm -r /tmp/fsync-kernel-images/
-printf "### Kernel replaced, temp files cleaned up ###"
+printf "### Kernel replaced, temp files cleaned up ###\n"
