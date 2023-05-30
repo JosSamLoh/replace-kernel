@@ -23,14 +23,14 @@ printf "### Packages to be replaced ###\n$INSTALLED_KERNEL_PACKAGES\n"
 # Automatically determine which Fedora version we"re building.
 # Taken from build.sh - shortened
 FEDORA_VERSION="$(cat /usr/lib/os-release | grep -Po '(?<=VERSION_ID=)\d+')"
-printf "### Fedora version ###\n$FEDORA_VERSION\n\n"
+printf "### Fedora version ###\n$FEDORA_VERSION\n"
 
 # Download all files recursively from repo and output to
 # /tmp/fsync-kernel-images - So far I've not found a way to specify specific
 # files
 wget -rc -np -nH -nd --random-wait -P "/tmp/fsync-kernel-images/" \
     https://download.copr.fedorainfracloud.org/results/sentry/kernel-fsync/fedora-$FEDORA_VERSION-x86_64/
-printf "### kernel-fsync packages installed into ###\n/tmp/fsync-kernel-images/\n\n"
+printf "### kernel-fsync packages installed into ###\n/tmp/fsync-kernel-images/\n"
 
 # Move into the directory containing the sentry/kernel-fsync files
 cd /tmp/fsync-kernel-images/
