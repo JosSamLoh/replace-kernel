@@ -6,8 +6,8 @@ set -oue pipefail
 # Set UNWANTED_PACKAGES=$(Query all installed packages listed as package names
 # only | grab entire lines containing 'kernel-tools' and
 # 'virtualbox-guest-additions')
-UNWANTED_PACKAGES="$(rpm -qa --qf "%{NAME}\n" | grep -P '^(?=kernel-tools|virtualbox|kmod)')"
-printf "### Packages to be removed ###\n$UNWANTED_PACKAGES\n\n"
+# UNWANTED_PACKAGES="$(rpm -qa --qf "%{NAME}\n" | grep -P '^(?=kernel-tools|virtualbox|kmod)')"
+# printf "### Packages to be removed ###\n$UNWANTED_PACKAGES\n\n"
 
 # Set INSTALLED_KERNEL_PACKAGES=$(Query all installed packages listed as
 # package names only | grab entire lines beginning with 'kernel*' except
@@ -33,10 +33,10 @@ rpm-ostree override replace \
     $(echo $INSTALLED_KERNEL_PACKAGES | \
     sed -e 's/^/.\//' | \
     sed -e 's/ /-[0-9]*[^src].rpm .\//g' | \
-    sed -e 's/$/-[0-9]*[^src].rpm/') \
-    $(echo $UNWANTED_PACKAGES | \
-    sed -e 's/^/--remove=/' | \
-    sed -e 's/ / --remove=/g')
+    sed -e 's/$/-[0-9]*[^src].rpm/') #\
+    #$(echo $UNWANTED_PACKAGES | \
+    #sed -e 's/^/--remove=/' | \
+    #sed -e 's/ / --remove=/g')
 
 # Exit the directory
 cd ..
