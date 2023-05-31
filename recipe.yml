@@ -48,8 +48,6 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client/repo/fedora-%FEDORA_VERSION%/pgaskin-looking-glass-client-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-%FEDORA_VERSION%/lukenukem-asus-linux-fedora-%FEDORA_VERSION%.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically

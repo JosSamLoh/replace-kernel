@@ -3,7 +3,7 @@
 # Tell this script to exit if there are any errors.
 set -oue pipefail
 
-# Automatically determine which Fedora version we"re building.
+# Automatically determine which Fedora version were building.
 # Taken from build.sh - shortened
 FEDORA_VERSION="$(cat /usr/lib/os-release | grep -Po '(?<=VERSION_ID=)\d+')"
 printf "### Fedora version ###\n$FEDORA_VERSION\n"
