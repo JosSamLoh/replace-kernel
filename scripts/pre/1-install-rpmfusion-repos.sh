@@ -6,7 +6,7 @@ set -oue pipefail
 # Automatically determine which Fedora version were building.
 # Taken from build.sh - shortened
 FEDORA_VERSION="$(cat /usr/lib/os-release | grep -Po '(?<=VERSION_ID=)\d+')"
-printf "### Fedora version ###\n$FEDORA_VERSION\n"
+printf "### Fedora version ###\n$FEDORA_VERSION\n\n"
 
 # Get RPMFusion repo rpms
 wget -P /tmp/rpmfusion-repos/ \
