@@ -66,8 +66,6 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
-    - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$FEDORA_VERSION.noarch.rpm
-    - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$FEDORA_VERSION.noarch.rpm
 
   # These RPMs will be removed from the system image. This step happsupergfxctlens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
