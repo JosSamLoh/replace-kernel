@@ -11,7 +11,6 @@ if [[ "$?" != 0 ]]; then
     sleep 1
 else
     printf "### Packages are installed which may cause dependency issues ###\n$UNWANTED_PACKAGES\n"
-    printf "### Some of these packages can be 'rpm-ostree override remove'-d ###\n\n"
     sleep 2
 fi
 
