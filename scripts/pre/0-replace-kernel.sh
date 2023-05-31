@@ -30,7 +30,7 @@ sleep 2
 # Download all files recursively from repo and output to
 # /tmp/kernel-fsync - So far I've not found a way to specify specific
 # files
-wget -rc -np -nH -nd --random-wait -P "/tmp/kernel-fsync/" \
+wget -nv -rc -np -nH -nd --random-wait -P "/tmp/kernel-fsync/" \
     "https://download.copr.fedorainfracloud.org/results/sentry/kernel-fsync/fedora-$FEDORA_VERSION-x86_64/"
 printf "### kernel-fsync rpms installed into ###\n/tmp/kernel-fsync/\n\n"
 sleep 1
