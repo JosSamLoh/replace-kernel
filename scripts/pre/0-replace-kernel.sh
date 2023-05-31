@@ -29,7 +29,7 @@ printf "### Fedora version ###\n$FEDORA_VERSION\n\n"
 sleep 2
 
 # Download all files recursively from repo and output to
-# /tmp/fsync-kernel-images - So far I've not found a way to specify specific
+# /tmp/kernel-fsync - So far I've not found a way to specify specific
 # files
 wget -rc -np -nH -nd --random-wait -P "/tmp/kernel-fsync/" \
     "https://download.copr.fedorainfracloud.org/results/sentry/kernel-fsync/fedora-$FEDORA_VERSION-x86_64/"
@@ -54,5 +54,5 @@ rpm-ostree override replace \
 cd ..
 
 # Cleanup
-rm -r /tmp/fsync-kernel-images/
+rm -r /tmp/kernel-fsync/
 printf "### Kernel replaced, temp files cleaned up ###\n\n"
