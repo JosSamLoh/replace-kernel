@@ -32,7 +32,7 @@ sleep 2
 # /tmp/fsync-kernel-images - So far I've not found a way to specify specific
 # files
 wget -rc -np -nH -nd --random-wait -P "/tmp/kernel-fsync/" \
-    "https://download.copr.fedorainfracloud.org/results/sentry/kernel-fsync/fedora-$FEDORA_VERSION-64_x86/"
+    "https://download.copr.fedorainfracloud.org/results/sentry/kernel-fsync/fedora-$FEDORA_VERSION-x86_64/"
 printf "### kernel-fsync rpms installed into ###\n/tmp/kernel-fsync/\n\n"
 sleep 1
 
