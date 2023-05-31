@@ -1,7 +1,7 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: silverblue-fsync
+name: silverblue-nvidia-fsync
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
@@ -14,7 +14,7 @@ base-image: quay.io/fedora-ostree-desktops/silverblue
 fedora-version: 38
 
 # This description will be visible in the container metadata.
-description: Testing kernel replacement
+description: Testing
 
 # These scripts will be executed during the container build.
 # Place scripts in the "scripts/" dir and put the corresponding filenames here.
@@ -66,8 +66,8 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
-    - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%FEDORA_VERSION%.noarch.rpm
-    - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%FEDORA_VERSION%.noarch.rpm
+    - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+    - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
     - looking-glass-client
     - virt-manager
     - lm_sensors
