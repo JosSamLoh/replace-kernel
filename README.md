@@ -1,10 +1,11 @@
-# Latest stock Silverblue image with the sentry/kernel-fsync kernel
-## Currently working on adding more images 
-
 # How to use these images
-### Silverblue (GNOME):
+### Silverblue (kernel-fsync):
 
     sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-fsync
+    
+### Silverblue (kernel-xanmod-edge):
+    
+    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-xanmod
 
 # vvv Built off of vvv
 
