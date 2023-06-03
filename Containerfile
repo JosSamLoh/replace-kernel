@@ -1,8 +1,18 @@
 ARG FEDORA_MAJOR_VERSION=latest
+# Warning: changing this might not do anything for you. Read comment above.
 ARG BASE_IMAGE_URL=ghcr.io/jossamloh/silverblue-fsync
+# This is the Containerfile for your custom image.
+
+# It takes in the recipe, version, and base image as arguments,
+# all of which are provided by build.yml when doing builds
+# in the cloud. The ARGs have default values, but changing those
+# does nothing if the image is built in the cloud.
 
 FROM ${BASE_IMAGE_URL}:${FEDORA_MAJOR_VERSION}
-ARG RECIPE
+
+# The default recipe set to the recipe's default filename
+# so that `podman build` should just work for many people.
+ARG RECIPE=./recipe.yml
 
 # Copy static configurations and component files.
 # Warning: If you want to place anything in "/etc" of the final image, you MUST

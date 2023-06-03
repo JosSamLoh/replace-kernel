@@ -1,3 +1,17 @@
+# How to replace the kernel
+In scripts you will find two files, [replace-kernel.sh](https://github.com/JosSamLoh/replace-kernel/blob/live/scripts/replace-kernel.sh) and [replace-kernel-easy.sh](https://github.com/JosSamLoh/replace-kernel/blob/live/scripts/replace-kernel-easy.sh) which can both be used to replace the linux kernel, both locally and using [ublue-os/startingpoint](https://github.com/ublue-os/startingpoint).
+
+# How to use these images
+### Silverblue (kernel-fsync):
+
+    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-fsync
+    
+### Silverblue (kernel-xanmod-edge):
+    
+    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-xanmod
+
+# vvv Built off of vvv
+
 # Starting point
 
 [![build-ublue](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/startingpoint/actions/workflows/build.yml)
