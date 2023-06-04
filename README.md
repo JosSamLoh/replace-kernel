@@ -10,6 +10,20 @@ In scripts you will find two files, [replace-kernel.sh](https://github.com/JosSa
     
     sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-xanmod
 
+### Silverblue (kernel-fsync-personal):
+    
+    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-fsync-personal
+
+## Added packages in my personal image
+    - lm_sensors
+    - looking-glass-client
+    - virt-manager
+    - supergfxctl
+    - distrobox
+    - gnome-shell-extension-pop-shell
+
+And I added nvidia drivers as a layered packages after rebasing, getting it to work using this repo has been unsuccessful so far.
+
 # vvv Built off of vvv
 
 # Starting point
