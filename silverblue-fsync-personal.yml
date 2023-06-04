@@ -1,11 +1,11 @@
 # This file can only be edited inside the uBlue image's git repository.
 
 # The image will be at "ghcr.io/yourusername/name".
-name: silverblue-fsync-personal
+name: silverblue-nvidia-personal
 
 # The native container image to build on top of.
 # Warning: Non-uBlue images might not work properly, due to missing components.
-base-image: ghcr.io/jossamloh/silverblue-fsync
+base-image: ublue-os/silverblue-nvidia:latest
 # What Fedora version to use. Use an explicit version or `latest`.
 # If you use `latest`, you will be automatically updated to the next major
 # Fedora version, assuming the image you're using as your base container
@@ -47,8 +47,7 @@ rpm:
   repos:
     # Example (which also demonstrates version number expansion):
     # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%FEDORA_VERSION%/atim-starship-fedora-%FEDORA_VERSION%.repo
-    - https://copr.fedorainfracloud.org/coprs/lukenukem/asus-linux/repo/fedora-38/lukenukem-asus-linux-fedora-38.repo
-    - https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client/repo/fedora-38/pgaskin-looking-glass-client-fedora-38.repo
+    - https://copr.fedorainfracloud.org/coprs/pgaskin/looking-glass-client/repo/fedora-%FEDORA_VERSION%/pgaskin-looking-glass-client-fedora-%FEDORA_VERSION%.repo
 
   # These RPMs will be installed from your enabled repositories (Fedora's own
   # repos, extra "repos" you've added, etc). The installation is automatically
@@ -65,19 +64,14 @@ rpm:
     # Add your own below:
     # Example:
     # - tilix
-    - lm_sensors
     - looking-glass-client
     - virt-manager
-    - supergfxctl
-    - distrobox
     - gnome-shell-extension-pop-shell
 
   # These RPMs will be removed from the system image. This step happens during
   # image build, BEFORE installing custom RPMs (from the "rpm.install" category).
   remove:
     # Remove the native firefox (from Fedora) in favor of the Flatpak.
-    - firefox
-    - firefox-langpacks
 
 # Configuration for the "first boot" experience, which is available after login.
 firstboot:

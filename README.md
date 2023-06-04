@@ -2,25 +2,22 @@
 In scripts you will find two files, [replace-kernel.sh](https://github.com/JosSamLoh/replace-kernel/blob/live/scripts/replace-kernel.sh) and [replace-kernel-easy.sh](https://github.com/JosSamLoh/replace-kernel/blob/live/scripts/replace-kernel-easy.sh) which can both be used to replace the linux kernel, both locally and using [ublue-os/startingpoint](https://github.com/ublue-os/startingpoint).
 
 # How to use these images
-### Silverblue (kernel-fsync):
+## Silverblue (kernel-fsync):
 
     sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-fsync
     
-### Silverblue (kernel-xanmod-edge):
+## Silverblue (kernel-xanmod-edge):
     
     sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-xanmod
 
-### Silverblue (kernel-fsync-personal):
+## Silverblue with Nvidia and personal configuration (kernel-nvidia-personal):
     
-    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-fsync-personal
+    sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/jossamloh/silverblue-nvidia-personal
 
-## Added packages in my personal image
-    - lm_sensors
-    - looking-glass-client
-    - virt-manager
-    - supergfxctl
-    - distrobox
-    - gnome-shell-extension-pop-shell
+### Added packages
+- looking-glass-client
+- virt-manager
+- gnome-shell-extension-pop-shell
 
 And I added nvidia drivers as a layered packages after rebasing, getting it to work using this repo has been unsuccessful so far.
 
