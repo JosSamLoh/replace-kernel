@@ -52,6 +52,7 @@ jobs:
         recipe:
           - silverblue-fsync.yml
           - silverblue-xanmod.yml
+          - silverblue-fsync-personal.yml
 
     steps:
       # Checkout push-to-registry action GitHub repository
