@@ -19,8 +19,6 @@ In scripts you will find two files, [replace-kernel.sh](https://github.com/JosSa
 - virt-manager
 - gnome-shell-extension-pop-shell
 
-And I added nvidia drivers as a layered packages after rebasing, getting it to work using this repo has been unsuccessful so far.
-
 # vvv Built off of vvv
 
 # Starting point
