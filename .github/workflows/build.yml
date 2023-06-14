@@ -53,7 +53,6 @@ jobs:
           - silverblue-fsync.yml
           - silverblue-xanmod.yml
           - silverblue-nvidia-personal.yml
-          - silverblue-nvidia-personal-texlive-full.yml
 
     steps:
       # Checkout push-to-registry action GitHub repository
