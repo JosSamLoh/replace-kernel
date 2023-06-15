@@ -68,7 +68,7 @@ rpm:
     - looking-glass-client
     - virt-manager
     - gnome-shell-extension-pop-shell
-    - texlive-scheme-medium
+    - texlive-scheme-full
     - setzer
     - ardour7
     - qjackctl
